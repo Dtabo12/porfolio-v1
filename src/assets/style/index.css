@@ -109,6 +109,7 @@ header>ul>li:hover {
 }
 
 .content__experience__card__left {
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -146,8 +147,7 @@ header>ul>li:hover {
     transition: var(--basic-transition);
 }
 
-.content__experience__card:hover 
-.content__experience__card__rigth>h4>span>svg {
+.content__experience__card:hover .content__experience__card__rigth>h4>span>svg {
     opacity: 1;
     transform: translateX(6px);
 }
@@ -172,6 +172,46 @@ header>ul>li:hover {
     color: var(--black);
 }
 
+.content__projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 0px 8px;
+}
+
+.content__projects__card {
+    position: relative;
+    transition: var(--basic-transition);
+}
+
+.content__projects__card>img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.content__projects__card>h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    background-color: transparent;
+    display: none;
+}
+
+.content__projects__card>h6>span {
+    background-color: transparent;
+}
+
+.content__projects__card:hover>img {
+    opacity: .4;
+}
+
+.content__projects__card:hover>h6 {
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -179,6 +219,21 @@ footer {
     position: fixed;
     bottom: 12px;
     left: 4rem;
+}
+
+/* Tablets */
+@media screen and (max-width: 865px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .content__experience__card {
+        flex-direction: column;
+    }
+
+    .content__experience__card__left {
+        width: 100%;
+    }
 }
 
 /* Cellphones */
@@ -225,8 +280,35 @@ footer {
         opacity: 1;
     }
 
+    .content__experience__card__left {
+        width: 100%;
+    }
+
     .content__experience__card__rigth {
         padding: 12px 0px;
+    }
+
+    .content__projects {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .content__projects__card {
+        position: unset;
+    }
+
+    .content__projects__card>img {
+        opacity: .4;
+    }
+
+    .content__projects__card>h6 {
+        position: unset;
+        display: inline;
+        font-size: 16px;
+    }
+
+    .content__projects__card>h6>span {
+        display: none;
     }
 
     footer {
