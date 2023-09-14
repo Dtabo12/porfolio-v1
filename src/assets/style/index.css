@@ -50,6 +50,22 @@ body {
     font-size: 2.5rem;
 }
 
+.navigator>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navigator>ul>li {
+    opacity: .5;
+    transition: var(--basic-transition);
+}
+
+.navigator>ul>li:hover {
+    opacity: 1;
+    transform: translateX(1rem);
+}
+
 .socials>ul {
     display: flex;
     gap: 2rem;
