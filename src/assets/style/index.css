@@ -46,6 +46,23 @@ body {
     padding-left: 2rem;
 }
 
+.desktop>header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktop>header>.picture {
+    width: 50%;
+}
+
+.desktop>header>.picture>img {
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .desktop>header>h1 {
     font-size: 2.5rem;
 }
@@ -126,28 +143,31 @@ body {
 
 .slideMenu__options {
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
-.slideMenu__options>ul {
-    background-color: transparent;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.slideMenu__options>ul>li {
+.slideMenu__options>.picture {
+    width: 40%;
     background-color: transparent;
 }
 
-.slideMenu__options>ul>li>a {
+.slideMenu__options>.picture>img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.slideMenu__options>h3 {
     background-color: transparent;
-    font-size: 1.5rem;
+}
+
+.slideMenu__socials {
+    background-color: transparent;
 }
 
 .slideMenu__socials>ul {
@@ -156,16 +176,17 @@ body {
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
-    position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-32px);
 }
 
 .slideMenu__socials>ul>li {
+    background-color: transparent;
     width: 32px;
     transition: var(--basic-transition);
     opacity: .5;
+}
+
+.slideMenu__socials>ul>li>a {
+    background-color: transparent;
 }
 
 .mobileContent {
@@ -207,6 +228,8 @@ body {
 
 .techContent__card>box-icon {
     background: transparent;
+    width: 2.3rem;
+    height: 2.3rem;
 }
 
 .techContent__card>span {
@@ -224,6 +247,12 @@ body {
     border-radius: .5rem;
     padding: 1rem;
     text-align: center;
+}
+
+.resumeContent>a:hover {
+    transition: var(--basic-transition);
+    background-color: var(--plain-text);
+    color: var(--black);
 }
 
 .workContent__card {
@@ -403,6 +432,10 @@ body {
 
     .slideMenu {
         display: flex;
+    }
+
+    .slideMenu__options>.picture>img {
+        width: 100%;
     }
 
     .slideMenu__socials>ul>li {
